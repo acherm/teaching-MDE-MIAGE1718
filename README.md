@@ -35,9 +35,7 @@ We illustrate the course with a running project, VideoGen, a configurable genera
 
 ## Homework 
 
-Jhipster and DSLs:
-https://github.com/acherm/teaching-MDE1617/wiki/JOOQ-homework
-
+Jhipster and DSLs:http://tinyurl.com/jhipster-langs1718
 Project: VideoGen (incl. 4 lab sessions)
 
 ## Resources 
