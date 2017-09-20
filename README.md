@@ -41,6 +41,8 @@ Project: VideoGen (incl. 4 lab sessions)
 
 ## Resources 
 
+Eclipse/Xtext: https://eclipse.org/downloads/eclipse-packages/ (Eclipse IDE for Java and DSL Developers)
+
 * see "slides" folder of this repo (the updloads of slides will follow the progress of the courses)
 * Resources used for the IDM course in 2016-217: https://github.com/acherm/teaching-MDE1617
 * JOOQ and SQL: https://github.com/acherm/teaching-MDE1617/wiki/JOOQ-homework
