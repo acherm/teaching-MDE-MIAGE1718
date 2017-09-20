@@ -33,15 +33,17 @@ We illustrate the course with a running project, VideoGen, a configurable genera
 * 6 TPs
 
 
-## Homework 
+## Exercices/Homework 
 
-Jhipster and DSLs:http://tinyurl.com/jhipster-langs1718
+Jhipster and DSLs: http://tinyurl.com/jhipster-langs1718 (
+
 Project: VideoGen (incl. 4 lab sessions)
 
 ## Resources 
 
 * see "slides" folder of this repo (the updloads of slides will follow the progress of the courses)
 * Resources used for the IDM course in 2016-217: https://github.com/acherm/teaching-MDE1617
+* JOOQ and SQL: https://github.com/acherm/teaching-MDE1617/wiki/JOOQ-homework
 * http://www.mathieuacher.com/teaching/MDE/ (content of previous years)
 * variability and product lines: http://teaching.variability.io
 
