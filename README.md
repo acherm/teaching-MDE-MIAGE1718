@@ -23,8 +23,8 @@ We illustrate the course with a running project, VideoGen, a configurable genera
 
 ## Evaluation 
 
-* 30% (homework + project)
-* 70% (partiel) 
+* 20% (homework + project)
+* 80% (partiel) 
 
 ## Lab sessions 
 
@@ -35,7 +35,7 @@ We illustrate the course with a running project, VideoGen, a configurable genera
 
 ## Exercices/Homework 
 
-Jhipster and DSLs: http://tinyurl.com/jhipster-langs1718 (
+Jhipster and GPLs/DSLs: http://tinyurl.com/jhipster-langs1718 (collaborative list of all languages used in Jhipster) 
 
 Project: VideoGen (incl. 4 lab sessions)
 
