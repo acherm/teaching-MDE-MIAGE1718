@@ -31,6 +31,7 @@ We illustrate the course with a running project, VideoGen, a configurable genera
 * 2 TDs 
    (instructions given during the session)
 * 6 TPs
+TP1: Xtext, first steps with VideoGen https://docs.google.com/document/d/1nJ50z8kYihbsp3iWazlp6ulpOPmMKnnMmHQM1ZqB1yg/edit?usp=sharing 
 
 
 ## Exercices/Homework 
