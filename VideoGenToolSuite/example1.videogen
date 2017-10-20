@@ -1,0 +1,11 @@
+@author "MIAGE 2 students"
+VideoGen {
+	
+	mandatory videoseq v1 "hello.mp4"
+	optional videoseq v2 "v2folder/v2.mp4"
+	alternatives v3 {
+		videoseq v31 "bla.mp4"
+		videoseq v32 "blabla.mp4"
+	}
+	mandatory videoseq v4 "coucou.mp4"
+}

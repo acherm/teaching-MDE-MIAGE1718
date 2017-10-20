@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VideoGenToolSuite
+Bundle-SymbolicName: VideoGenToolSuite
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.xtext.example.videogen;bundle-version="1.0.0",
+ org.xtext.example.videogen.ide;bundle-version="1.0.0",
+ org.xtext.example.videogen.tests;bundle-version="1.0.0",
+ org.xtext.example.videogen.ui;bundle-version="1.0.0",
+ org.xtext.example.videogen.ui.tests;bundle-version="1.0.0",
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.13.0"
+
