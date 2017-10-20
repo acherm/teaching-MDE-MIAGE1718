@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="videoGen" nsURI="http://www.xtext.org/example/mydsl/VideoGen"
+    nsPrefix="videoGen">
+  <eClassifiers xsi:type="ecore:EClass" name="VideoGeneratorModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="information" eType="#//VideoGenInformation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="videoseqs" upperBound="-1"
+        eType="#//VideoSeq" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VideoGenInformation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authorName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VideoSeq"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MandatoryVideoSeq" eSuperTypes="#//VideoSeq">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" eType="#//VideoDescription"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OptionalVideoSeq" eSuperTypes="#//VideoSeq">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" eType="#//VideoDescription"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AlternativeVideoSeq" eSuperTypes="#//VideoSeq">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="videoid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="videodescs" upperBound="-1"
+        eType="#//VideoDescription" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VideoDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="videoid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="probability" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="#//Filter"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//Text" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Text">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Filter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BlackWhiteFilter" eSuperTypes="#//Filter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NegateFilter" eSuperTypes="#//Filter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FlipFilter" eSuperTypes="#//Filter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="orientation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

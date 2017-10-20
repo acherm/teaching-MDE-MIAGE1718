@@ -1,0 +1,82 @@
+grammar org.xtext.example.mydsl.VideoGen with org.eclipse.xtext.common.Terminals
+
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+generate videoGen "http://www.xtext.org/example/mydsl/VideoGen"
+
+
+
+VideoGeneratorModel:
+	{VideoGeneratorModel}
+	(information=VideoGenInformation)?
+	'VideoGen' LEFT_BRACKET
+	videoseqs+=VideoSeq+
+	RIGHT_BRACKET;
+
+VideoGenInformation:
+	{VideoGenInformation}
+	('@author' authorName=STRING)
+	('@version' version=STRING)?
+	('@creation' creationDate=STRING)?;
+
+
+
+VideoSeq:
+	MandatoryVideoSeq | OptionalVideoSeq | AlternativeVideoSeq;
+
+MandatoryVideoSeq:
+	'mandatory' description=VideoDescription;
+
+OptionalVideoSeq:
+	'optional' description=VideoDescription;
+
+AlternativeVideoSeq:
+	'alternatives' (videoid=ID)? LEFT_BRACKET videodescs+=VideoDescription+ RIGHT_BRACKET;
+
+VideoDescription:
+	'videoseq' (videoid=ID)? location=STRING
+	(LEFT_BRACKET
+	 ('duration' duration=INT)?
+	 ('probability' probability=INT)? // percentage 
+	 ('size' size=INT)?
+	 ('description' description=STRING)?
+	 ('filter' filter=Filter)? // apply some filters to a video
+	 ('text' text=Text)? // incrust a text into a video
+	RIGHT_BRACKET)?
+;
+
+
+
+Text :
+	LEFT_BRACKET
+	'content' content=STRING
+	'position' position=Position
+	('color' color=STRING)?
+	('size' size=INT)?
+	RIGHT_BRACKET
+;
+
+Position :
+	'TOP' | 'BOTTOM' | 'CENTER'
+;
+
+
+
+Filter : FlipFilter | NegateFilter | BlackWhiteFilter;
+
+BlackWhiteFilter: {BlackWhiteFilter}
+	'b&w'
+;
+
+NegateFilter: {NegateFilter}
+	'negate'
+;
+
+FlipFilter:
+	'flip' orientation=('h' | 'horizontal' | 'v' | 'vertical')
+;
+
+terminal LEFT_BRACKET: '{' ;
+terminal RIGHT_BRACKET: '}';
+terminal PERCENTAGE returns ecore::EInt: ('1'..'9')('0'..'9')? | '100';
+terminal FLOAT returns ecore::EFloat: INT'.'INT;
