@@ -18,8 +18,7 @@ We illustrate the course with a running project, VideoGen, a configurable genera
 * model transformation-- ModelManagementXtend1.pdf 
 * meta-programming, annotations, advanced compositions -- ModelManagementXtend2.pdf 
 * Xtend, a modern programming language implemented with MDE principles (Xtext included) -- ModelManagementXtend2.pdf
-* variability modeling -- SPLVariability-light1617.pdf 
-* software product lines and configuration -- SPLVariability-light1617.pdf 
+* software product lines, variability modeling, and configuration: some cases (VaryLaTeX, JHipster testing) -- SPLVariability-misc.pdf 
 
 ## Evaluation 
 
@@ -34,6 +33,8 @@ We illustrate the course with a running project, VideoGen, a configurable genera
   * TP1: Xtext, first steps with VideoGen https://docs.google.com/document/d/1nJ50z8kYihbsp3iWazlp6ulpOPmMKnnMmHQM1ZqB1yg/edit?usp=sharing 
   * TP2: Model transformation, let's play video variants! https://docs.google.com/document/d/1_nFb-jv2ZnIaNw4c59McxXve8ahcZw5CKjcWYaSswkM/edit?usp=sharing
   * TP3: Model transformation, data analysis https://docs.google.com/document/d/1OETjPKA7_bOuGKKt19Wc_fN4l7MWM0NUm8ra2N72oNM/edit?usp=sharing
+  * TP4: test, refactoring, and continuing https://docs.google.com/document/d/1VnuDxgmJpkxeYBddPbOR4L0XIPxgsdtdWCK0jKZMqYc/edit?usp=sharing
+  * TP5/TP6/projet: TP* (putting all together) https://docs.google.com/document/d/1VtFK0tDDLfxOmYktWliVA7M0WFXDv3mxreeghdub9cA/edit?usp=sharing
 
 
 ## Exercices/Homework 
