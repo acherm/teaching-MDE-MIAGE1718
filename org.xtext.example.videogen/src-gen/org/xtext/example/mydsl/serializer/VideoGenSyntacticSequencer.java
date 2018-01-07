@@ -21,12 +21,12 @@ import org.xtext.example.mydsl.services.VideoGenGrammarAccess;
 public class VideoGenSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected VideoGenGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_7__q;
+	protected AbstractElementAlias match_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_6__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (VideoGenGrammarAccess) access;
-		match_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_7__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getVideoDescriptionAccess().getLEFT_BRACKETTerminalRuleCall_3_0()), new TokenAlias(false, false, grammarAccess.getVideoDescriptionAccess().getRIGHT_BRACKETTerminalRuleCall_3_7()));
+		match_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_6__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getVideoDescriptionAccess().getLEFT_BRACKETTerminalRuleCall_3_0()), new TokenAlias(false, false, grammarAccess.getVideoDescriptionAccess().getRIGHT_BRACKETTerminalRuleCall_3_6()));
 	}
 	
 	@Override
@@ -62,8 +62,8 @@ public class VideoGenSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_7__q.equals(syntax))
-				emit_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_7__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_6__q.equals(syntax))
+				emit_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_6__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -75,7 +75,7 @@ public class VideoGenSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     location=STRING (ambiguity) (rule end)
 	 */
-	protected void emit_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_7__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_VideoDescription___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_6__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

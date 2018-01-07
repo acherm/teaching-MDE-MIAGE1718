@@ -10,12 +10,18 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.example.mydsl.videoGen.AlternativeImage;
 import org.xtext.example.mydsl.videoGen.AlternativeVideoSeq;
 import org.xtext.example.mydsl.videoGen.BlackWhiteFilter;
 import org.xtext.example.mydsl.videoGen.Filter;
 import org.xtext.example.mydsl.videoGen.FlipFilter;
+import org.xtext.example.mydsl.videoGen.Image;
+import org.xtext.example.mydsl.videoGen.ImageDescription;
+import org.xtext.example.mydsl.videoGen.MandatoryImage;
 import org.xtext.example.mydsl.videoGen.MandatoryVideoSeq;
+import org.xtext.example.mydsl.videoGen.Media;
 import org.xtext.example.mydsl.videoGen.NegateFilter;
+import org.xtext.example.mydsl.videoGen.OptionalImage;
 import org.xtext.example.mydsl.videoGen.OptionalVideoSeq;
 import org.xtext.example.mydsl.videoGen.Text;
 import org.xtext.example.mydsl.videoGen.VideoDescription;
@@ -46,6 +52,48 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
    * @generated
    */
   private EClass videoGenInformationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mediaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass imageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mandatoryImageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass optionalImageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass alternativeImageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass imageDescriptionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -205,7 +253,7 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getVideoGeneratorModel_Videoseqs()
+  public EReference getVideoGeneratorModel_Medias()
   {
     return (EReference)videoGeneratorModelEClass.getEStructuralFeatures().get(1);
   }
@@ -248,6 +296,146 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
   public EAttribute getVideoGenInformation_CreationDate()
   {
     return (EAttribute)videoGenInformationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMedia()
+  {
+    return mediaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImage()
+  {
+    return imageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMandatoryImage()
+  {
+    return mandatoryImageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMandatoryImage_Description()
+  {
+    return (EReference)mandatoryImageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOptionalImage()
+  {
+    return optionalImageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOptionalImage_Description()
+  {
+    return (EReference)optionalImageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAlternativeImage()
+  {
+    return alternativeImageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAlternativeImage_Imageid()
+  {
+    return (EAttribute)alternativeImageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAlternativeImage_Images()
+  {
+    return (EReference)alternativeImageEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImageDescription()
+  {
+    return imageDescriptionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImageDescription_Imageid()
+  {
+    return (EAttribute)imageDescriptionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImageDescription_Location()
+  {
+    return (EAttribute)imageDescriptionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImageDescription_Top()
+  {
+    return (EAttribute)imageDescriptionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImageDescription_Bottom()
+  {
+    return (EAttribute)imageDescriptionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -385,7 +573,7 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getVideoDescription_Size()
+  public EAttribute getVideoDescription_Description()
   {
     return (EAttribute)videoDescriptionEClass.getEStructuralFeatures().get(4);
   }
@@ -395,19 +583,9 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getVideoDescription_Description()
-  {
-    return (EAttribute)videoDescriptionEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getVideoDescription_Filter()
   {
-    return (EReference)videoDescriptionEClass.getEStructuralFeatures().get(6);
+    return (EReference)videoDescriptionEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -417,7 +595,7 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
    */
   public EReference getVideoDescription_Text()
   {
-    return (EReference)videoDescriptionEClass.getEStructuralFeatures().get(7);
+    return (EReference)videoDescriptionEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -552,12 +730,32 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
     // Create classes and their features
     videoGeneratorModelEClass = createEClass(VIDEO_GENERATOR_MODEL);
     createEReference(videoGeneratorModelEClass, VIDEO_GENERATOR_MODEL__INFORMATION);
-    createEReference(videoGeneratorModelEClass, VIDEO_GENERATOR_MODEL__VIDEOSEQS);
+    createEReference(videoGeneratorModelEClass, VIDEO_GENERATOR_MODEL__MEDIAS);
 
     videoGenInformationEClass = createEClass(VIDEO_GEN_INFORMATION);
     createEAttribute(videoGenInformationEClass, VIDEO_GEN_INFORMATION__AUTHOR_NAME);
     createEAttribute(videoGenInformationEClass, VIDEO_GEN_INFORMATION__VERSION);
     createEAttribute(videoGenInformationEClass, VIDEO_GEN_INFORMATION__CREATION_DATE);
+
+    mediaEClass = createEClass(MEDIA);
+
+    imageEClass = createEClass(IMAGE);
+
+    mandatoryImageEClass = createEClass(MANDATORY_IMAGE);
+    createEReference(mandatoryImageEClass, MANDATORY_IMAGE__DESCRIPTION);
+
+    optionalImageEClass = createEClass(OPTIONAL_IMAGE);
+    createEReference(optionalImageEClass, OPTIONAL_IMAGE__DESCRIPTION);
+
+    alternativeImageEClass = createEClass(ALTERNATIVE_IMAGE);
+    createEAttribute(alternativeImageEClass, ALTERNATIVE_IMAGE__IMAGEID);
+    createEReference(alternativeImageEClass, ALTERNATIVE_IMAGE__IMAGES);
+
+    imageDescriptionEClass = createEClass(IMAGE_DESCRIPTION);
+    createEAttribute(imageDescriptionEClass, IMAGE_DESCRIPTION__IMAGEID);
+    createEAttribute(imageDescriptionEClass, IMAGE_DESCRIPTION__LOCATION);
+    createEAttribute(imageDescriptionEClass, IMAGE_DESCRIPTION__TOP);
+    createEAttribute(imageDescriptionEClass, IMAGE_DESCRIPTION__BOTTOM);
 
     videoSeqEClass = createEClass(VIDEO_SEQ);
 
@@ -576,7 +774,6 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
     createEAttribute(videoDescriptionEClass, VIDEO_DESCRIPTION__LOCATION);
     createEAttribute(videoDescriptionEClass, VIDEO_DESCRIPTION__DURATION);
     createEAttribute(videoDescriptionEClass, VIDEO_DESCRIPTION__PROBABILITY);
-    createEAttribute(videoDescriptionEClass, VIDEO_DESCRIPTION__SIZE);
     createEAttribute(videoDescriptionEClass, VIDEO_DESCRIPTION__DESCRIPTION);
     createEReference(videoDescriptionEClass, VIDEO_DESCRIPTION__FILTER);
     createEReference(videoDescriptionEClass, VIDEO_DESCRIPTION__TEXT);
@@ -626,6 +823,11 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    imageEClass.getESuperTypes().add(this.getMedia());
+    mandatoryImageEClass.getESuperTypes().add(this.getImage());
+    optionalImageEClass.getESuperTypes().add(this.getImage());
+    alternativeImageEClass.getESuperTypes().add(this.getImage());
+    videoSeqEClass.getESuperTypes().add(this.getMedia());
     mandatoryVideoSeqEClass.getESuperTypes().add(this.getVideoSeq());
     optionalVideoSeqEClass.getESuperTypes().add(this.getVideoSeq());
     alternativeVideoSeqEClass.getESuperTypes().add(this.getVideoSeq());
@@ -636,12 +838,32 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
     // Initialize classes and features; add operations and parameters
     initEClass(videoGeneratorModelEClass, VideoGeneratorModel.class, "VideoGeneratorModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getVideoGeneratorModel_Information(), this.getVideoGenInformation(), null, "information", null, 0, 1, VideoGeneratorModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getVideoGeneratorModel_Videoseqs(), this.getVideoSeq(), null, "videoseqs", null, 0, -1, VideoGeneratorModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getVideoGeneratorModel_Medias(), this.getMedia(), null, "medias", null, 0, -1, VideoGeneratorModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(videoGenInformationEClass, VideoGenInformation.class, "VideoGenInformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVideoGenInformation_AuthorName(), ecorePackage.getEString(), "authorName", null, 0, 1, VideoGenInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVideoGenInformation_Version(), ecorePackage.getEString(), "version", null, 0, 1, VideoGenInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVideoGenInformation_CreationDate(), ecorePackage.getEString(), "creationDate", null, 0, 1, VideoGenInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(mediaEClass, Media.class, "Media", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(mandatoryImageEClass, MandatoryImage.class, "MandatoryImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMandatoryImage_Description(), this.getImageDescription(), null, "description", null, 0, 1, MandatoryImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(optionalImageEClass, OptionalImage.class, "OptionalImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getOptionalImage_Description(), this.getImageDescription(), null, "description", null, 0, 1, OptionalImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(alternativeImageEClass, AlternativeImage.class, "AlternativeImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAlternativeImage_Imageid(), ecorePackage.getEString(), "imageid", null, 0, 1, AlternativeImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlternativeImage_Images(), this.getImageDescription(), null, "images", null, 0, -1, AlternativeImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(imageDescriptionEClass, ImageDescription.class, "ImageDescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImageDescription_Imageid(), ecorePackage.getEString(), "imageid", null, 0, 1, ImageDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImageDescription_Location(), ecorePackage.getEString(), "location", null, 0, 1, ImageDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImageDescription_Top(), ecorePackage.getEString(), "top", null, 0, 1, ImageDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImageDescription_Bottom(), ecorePackage.getEString(), "bottom", null, 0, 1, ImageDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(videoSeqEClass, VideoSeq.class, "VideoSeq", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -660,7 +882,6 @@ public class VideoGenPackageImpl extends EPackageImpl implements VideoGenPackage
     initEAttribute(getVideoDescription_Location(), ecorePackage.getEString(), "location", null, 0, 1, VideoDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVideoDescription_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, VideoDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVideoDescription_Probability(), ecorePackage.getEInt(), "probability", null, 0, 1, VideoDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getVideoDescription_Size(), ecorePackage.getEInt(), "size", null, 0, 1, VideoDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVideoDescription_Description(), ecorePackage.getEString(), "description", null, 0, 1, VideoDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVideoDescription_Filter(), this.getFilter(), null, "filter", null, 0, 1, VideoDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVideoDescription_Text(), this.getText(), null, "text", null, 0, 1, VideoDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

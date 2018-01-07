@@ -29,7 +29,6 @@ import org.xtext.example.mydsl.videoGen.VideoGenPackage;
  *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoDescriptionImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoDescriptionImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoDescriptionImpl#getProbability <em>Probability</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoDescriptionImpl#getSize <em>Size</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoDescriptionImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoDescriptionImpl#getFilter <em>Filter</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoDescriptionImpl#getText <em>Text</em>}</li>
@@ -118,26 +117,6 @@ public class VideoDescriptionImpl extends MinimalEObjectImpl.Container implement
    * @ordered
    */
   protected int probability = PROBABILITY_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSize()
-   * @generated
-   * @ordered
-   */
-  protected static final int SIZE_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSize()
-   * @generated
-   * @ordered
-   */
-  protected int size = SIZE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -297,29 +276,6 @@ public class VideoDescriptionImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getSize()
-  {
-    return size;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSize(int newSize)
-  {
-    int oldSize = size;
-    size = newSize;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VideoGenPackage.VIDEO_DESCRIPTION__SIZE, oldSize, size));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getDescription()
   {
     return description;
@@ -470,8 +426,6 @@ public class VideoDescriptionImpl extends MinimalEObjectImpl.Container implement
         return getDuration();
       case VideoGenPackage.VIDEO_DESCRIPTION__PROBABILITY:
         return getProbability();
-      case VideoGenPackage.VIDEO_DESCRIPTION__SIZE:
-        return getSize();
       case VideoGenPackage.VIDEO_DESCRIPTION__DESCRIPTION:
         return getDescription();
       case VideoGenPackage.VIDEO_DESCRIPTION__FILTER:
@@ -503,9 +457,6 @@ public class VideoDescriptionImpl extends MinimalEObjectImpl.Container implement
         return;
       case VideoGenPackage.VIDEO_DESCRIPTION__PROBABILITY:
         setProbability((Integer)newValue);
-        return;
-      case VideoGenPackage.VIDEO_DESCRIPTION__SIZE:
-        setSize((Integer)newValue);
         return;
       case VideoGenPackage.VIDEO_DESCRIPTION__DESCRIPTION:
         setDescription((String)newValue);
@@ -542,9 +493,6 @@ public class VideoDescriptionImpl extends MinimalEObjectImpl.Container implement
       case VideoGenPackage.VIDEO_DESCRIPTION__PROBABILITY:
         setProbability(PROBABILITY_EDEFAULT);
         return;
-      case VideoGenPackage.VIDEO_DESCRIPTION__SIZE:
-        setSize(SIZE_EDEFAULT);
-        return;
       case VideoGenPackage.VIDEO_DESCRIPTION__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
@@ -576,8 +524,6 @@ public class VideoDescriptionImpl extends MinimalEObjectImpl.Container implement
         return duration != DURATION_EDEFAULT;
       case VideoGenPackage.VIDEO_DESCRIPTION__PROBABILITY:
         return probability != PROBABILITY_EDEFAULT;
-      case VideoGenPackage.VIDEO_DESCRIPTION__SIZE:
-        return size != SIZE_EDEFAULT;
       case VideoGenPackage.VIDEO_DESCRIPTION__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case VideoGenPackage.VIDEO_DESCRIPTION__FILTER:
@@ -607,8 +553,6 @@ public class VideoDescriptionImpl extends MinimalEObjectImpl.Container implement
     result.append(duration);
     result.append(", probability: ");
     result.append(probability);
-    result.append(", size: ");
-    result.append(size);
     result.append(", description: ");
     result.append(description);
     result.append(')');

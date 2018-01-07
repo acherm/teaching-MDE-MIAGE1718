@@ -67,6 +67,12 @@ public class VideoGenFactoryImpl extends EFactoryImpl implements VideoGenFactory
     {
       case VideoGenPackage.VIDEO_GENERATOR_MODEL: return createVideoGeneratorModel();
       case VideoGenPackage.VIDEO_GEN_INFORMATION: return createVideoGenInformation();
+      case VideoGenPackage.MEDIA: return createMedia();
+      case VideoGenPackage.IMAGE: return createImage();
+      case VideoGenPackage.MANDATORY_IMAGE: return createMandatoryImage();
+      case VideoGenPackage.OPTIONAL_IMAGE: return createOptionalImage();
+      case VideoGenPackage.ALTERNATIVE_IMAGE: return createAlternativeImage();
+      case VideoGenPackage.IMAGE_DESCRIPTION: return createImageDescription();
       case VideoGenPackage.VIDEO_SEQ: return createVideoSeq();
       case VideoGenPackage.MANDATORY_VIDEO_SEQ: return createMandatoryVideoSeq();
       case VideoGenPackage.OPTIONAL_VIDEO_SEQ: return createOptionalVideoSeq();
@@ -102,6 +108,72 @@ public class VideoGenFactoryImpl extends EFactoryImpl implements VideoGenFactory
   {
     VideoGenInformationImpl videoGenInformation = new VideoGenInformationImpl();
     return videoGenInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Media createMedia()
+  {
+    MediaImpl media = new MediaImpl();
+    return media;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Image createImage()
+  {
+    ImageImpl image = new ImageImpl();
+    return image;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MandatoryImage createMandatoryImage()
+  {
+    MandatoryImageImpl mandatoryImage = new MandatoryImageImpl();
+    return mandatoryImage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OptionalImage createOptionalImage()
+  {
+    OptionalImageImpl optionalImage = new OptionalImageImpl();
+    return optionalImage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AlternativeImage createAlternativeImage()
+  {
+    AlternativeImageImpl alternativeImage = new AlternativeImageImpl();
+    return alternativeImage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImageDescription createImageDescription()
+  {
+    ImageDescriptionImpl imageDescription = new ImageDescriptionImpl();
+    return imageDescription;
   }
 
   /**

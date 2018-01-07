@@ -5,15 +5,36 @@
   <eClassifiers xsi:type="ecore:EClass" name="VideoGeneratorModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="information" eType="#//VideoGenInformation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="videoseqs" upperBound="-1"
-        eType="#//VideoSeq" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="medias" upperBound="-1"
+        eType="#//Media" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VideoGenInformation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authorName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VideoSeq"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Media"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//Media"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MandatoryImage" eSuperTypes="#//Image">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" eType="#//ImageDescription"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OptionalImage" eSuperTypes="#//Image">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" eType="#//ImageDescription"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AlternativeImage" eSuperTypes="#//Image">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="images" upperBound="-1"
+        eType="#//ImageDescription" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImageDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="top" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bottom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VideoSeq" eSuperTypes="#//Media"/>
   <eClassifiers xsi:type="ecore:EClass" name="MandatoryVideoSeq" eSuperTypes="#//VideoSeq">
     <eStructuralFeatures xsi:type="ecore:EReference" name="description" eType="#//VideoDescription"
         containment="true"/>
@@ -32,7 +53,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="probability" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="#//Filter"
         containment="true"/>

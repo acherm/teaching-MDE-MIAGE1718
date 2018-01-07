@@ -3,7 +3,6 @@
  */
 package org.xtext.example.mydsl.videoGen;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface VideoSeq extends EObject
+public interface VideoSeq extends Media
 {
 } // VideoSeq

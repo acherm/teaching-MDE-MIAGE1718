@@ -42,6 +42,60 @@ public interface VideoGenFactory extends EFactory
   VideoGenInformation createVideoGenInformation();
 
   /**
+   * Returns a new object of class '<em>Media</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Media</em>'.
+   * @generated
+   */
+  Media createMedia();
+
+  /**
+   * Returns a new object of class '<em>Image</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image</em>'.
+   * @generated
+   */
+  Image createImage();
+
+  /**
+   * Returns a new object of class '<em>Mandatory Image</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mandatory Image</em>'.
+   * @generated
+   */
+  MandatoryImage createMandatoryImage();
+
+  /**
+   * Returns a new object of class '<em>Optional Image</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Optional Image</em>'.
+   * @generated
+   */
+  OptionalImage createOptionalImage();
+
+  /**
+   * Returns a new object of class '<em>Alternative Image</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Alternative Image</em>'.
+   * @generated
+   */
+  AlternativeImage createAlternativeImage();
+
+  /**
+   * Returns a new object of class '<em>Image Description</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Description</em>'.
+   * @generated
+   */
+  ImageDescription createImageDescription();
+
+  /**
    * Returns a new object of class '<em>Video Seq</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

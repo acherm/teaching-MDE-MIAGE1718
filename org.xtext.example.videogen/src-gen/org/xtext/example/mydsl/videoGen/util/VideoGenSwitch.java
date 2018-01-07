@@ -87,10 +87,60 @@ public class VideoGenSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VideoGenPackage.MEDIA:
+      {
+        Media media = (Media)theEObject;
+        T result = caseMedia(media);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VideoGenPackage.IMAGE:
+      {
+        Image image = (Image)theEObject;
+        T result = caseImage(image);
+        if (result == null) result = caseMedia(image);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VideoGenPackage.MANDATORY_IMAGE:
+      {
+        MandatoryImage mandatoryImage = (MandatoryImage)theEObject;
+        T result = caseMandatoryImage(mandatoryImage);
+        if (result == null) result = caseImage(mandatoryImage);
+        if (result == null) result = caseMedia(mandatoryImage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VideoGenPackage.OPTIONAL_IMAGE:
+      {
+        OptionalImage optionalImage = (OptionalImage)theEObject;
+        T result = caseOptionalImage(optionalImage);
+        if (result == null) result = caseImage(optionalImage);
+        if (result == null) result = caseMedia(optionalImage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VideoGenPackage.ALTERNATIVE_IMAGE:
+      {
+        AlternativeImage alternativeImage = (AlternativeImage)theEObject;
+        T result = caseAlternativeImage(alternativeImage);
+        if (result == null) result = caseImage(alternativeImage);
+        if (result == null) result = caseMedia(alternativeImage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VideoGenPackage.IMAGE_DESCRIPTION:
+      {
+        ImageDescription imageDescription = (ImageDescription)theEObject;
+        T result = caseImageDescription(imageDescription);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VideoGenPackage.VIDEO_SEQ:
       {
         VideoSeq videoSeq = (VideoSeq)theEObject;
         T result = caseVideoSeq(videoSeq);
+        if (result == null) result = caseMedia(videoSeq);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -99,6 +149,7 @@ public class VideoGenSwitch<T> extends Switch<T>
         MandatoryVideoSeq mandatoryVideoSeq = (MandatoryVideoSeq)theEObject;
         T result = caseMandatoryVideoSeq(mandatoryVideoSeq);
         if (result == null) result = caseVideoSeq(mandatoryVideoSeq);
+        if (result == null) result = caseMedia(mandatoryVideoSeq);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -107,6 +158,7 @@ public class VideoGenSwitch<T> extends Switch<T>
         OptionalVideoSeq optionalVideoSeq = (OptionalVideoSeq)theEObject;
         T result = caseOptionalVideoSeq(optionalVideoSeq);
         if (result == null) result = caseVideoSeq(optionalVideoSeq);
+        if (result == null) result = caseMedia(optionalVideoSeq);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -115,6 +167,7 @@ public class VideoGenSwitch<T> extends Switch<T>
         AlternativeVideoSeq alternativeVideoSeq = (AlternativeVideoSeq)theEObject;
         T result = caseAlternativeVideoSeq(alternativeVideoSeq);
         if (result == null) result = caseVideoSeq(alternativeVideoSeq);
+        if (result == null) result = caseMedia(alternativeVideoSeq);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -195,6 +248,102 @@ public class VideoGenSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVideoGenInformation(VideoGenInformation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Media</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Media</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMedia(Media object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImage(Image object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Mandatory Image</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mandatory Image</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMandatoryImage(MandatoryImage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Optional Image</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Optional Image</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOptionalImage(OptionalImage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Alternative Image</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Alternative Image</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAlternativeImage(AlternativeImage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image Description</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image Description</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImageDescription(ImageDescription object)
   {
     return null;
   }

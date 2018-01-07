@@ -10,7 +10,9 @@ VideoGeneratorModel:
 	{VideoGeneratorModel}
 	(information=VideoGenInformation)?
 	'VideoGen' LEFT_BRACKET
-	videoseqs+=VideoSeq+
+	medias+=Media+
+	/*videoseqs+=VideoSeq+
+	images+=Image+*/
 	RIGHT_BRACKET;
 
 VideoGenInformation:
@@ -19,7 +21,40 @@ VideoGenInformation:
 	('@version' version=STRING)?
 	('@creation' creationDate=STRING)?;
 
+Media : 	(Image|VideoSeq)
+	// (MandatoryMedia | OptionalMedia | AlternativesMedia) 
+;
 
+/*
+MediaDescription: (ImageDescription|VideoDescription);
+MandatoryMedia : 'mandatory' description=MediaDescription;
+
+OptionalMedia : 'optional' description=MediaDescription;
+
+AlternativesMedia : 'alternatives' (id=ID)? LEFT_BRACKET medias+=MediaDescription+ RIGHT_BRACKET;
+*/
+
+Image : 
+	(MandatoryImage | OptionalImage | AlternativeImage) ; 
+
+MandatoryImage: 
+	'mandatory' description=ImageDescription;
+	
+	
+OptionalImage : 
+	'optional' description=ImageDescription;
+
+AlternativeImage :
+	'alternatives' (imageid=ID)? LEFT_BRACKET images+=ImageDescription+ RIGHT_BRACKET;
+	
+
+
+ImageDescription : 'image' (imageid=ID)? location=STRING 
+	(LEFT_BRACKET
+	('toptext' top=STRING)
+	('bottomtext' bottom=STRING)
+	RIGHT_BRACKET)?
+;
 
 VideoSeq:
 	MandatoryVideoSeq | OptionalVideoSeq | AlternativeVideoSeq;
@@ -37,8 +72,9 @@ VideoDescription:
 	'videoseq' (videoid=ID)? location=STRING
 	(LEFT_BRACKET
 	 ('duration' duration=INT)?
-	 ('probability' probability=INT)? // percentage 
-	 ('size' size=INT)?
+	 ('probability' probability=PERCENTAGE)? // percentage 
+	 // (note: probability does not make any sense for mandatory medias... 
+	 // we can refactor the grammar or handle this situation with a model transformation) 
 	 ('description' description=STRING)?
 	 ('filter' filter=Filter)? // apply some filters to a video
 	 ('text' text=Text)? // incrust a text into a video

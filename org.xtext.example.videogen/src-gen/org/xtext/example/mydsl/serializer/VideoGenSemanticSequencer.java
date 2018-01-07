@@ -15,11 +15,15 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.example.mydsl.services.VideoGenGrammarAccess;
+import org.xtext.example.mydsl.videoGen.AlternativeImage;
 import org.xtext.example.mydsl.videoGen.AlternativeVideoSeq;
 import org.xtext.example.mydsl.videoGen.BlackWhiteFilter;
 import org.xtext.example.mydsl.videoGen.FlipFilter;
+import org.xtext.example.mydsl.videoGen.ImageDescription;
+import org.xtext.example.mydsl.videoGen.MandatoryImage;
 import org.xtext.example.mydsl.videoGen.MandatoryVideoSeq;
 import org.xtext.example.mydsl.videoGen.NegateFilter;
+import org.xtext.example.mydsl.videoGen.OptionalImage;
 import org.xtext.example.mydsl.videoGen.OptionalVideoSeq;
 import org.xtext.example.mydsl.videoGen.Text;
 import org.xtext.example.mydsl.videoGen.VideoDescription;
@@ -41,6 +45,9 @@ public class VideoGenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == VideoGenPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case VideoGenPackage.ALTERNATIVE_IMAGE:
+				sequence_AlternativeImage(context, (AlternativeImage) semanticObject); 
+				return; 
 			case VideoGenPackage.ALTERNATIVE_VIDEO_SEQ:
 				sequence_AlternativeVideoSeq(context, (AlternativeVideoSeq) semanticObject); 
 				return; 
@@ -50,11 +57,20 @@ public class VideoGenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case VideoGenPackage.FLIP_FILTER:
 				sequence_FlipFilter(context, (FlipFilter) semanticObject); 
 				return; 
+			case VideoGenPackage.IMAGE_DESCRIPTION:
+				sequence_ImageDescription(context, (ImageDescription) semanticObject); 
+				return; 
+			case VideoGenPackage.MANDATORY_IMAGE:
+				sequence_MandatoryImage(context, (MandatoryImage) semanticObject); 
+				return; 
 			case VideoGenPackage.MANDATORY_VIDEO_SEQ:
 				sequence_MandatoryVideoSeq(context, (MandatoryVideoSeq) semanticObject); 
 				return; 
 			case VideoGenPackage.NEGATE_FILTER:
 				sequence_NegateFilter(context, (NegateFilter) semanticObject); 
+				return; 
+			case VideoGenPackage.OPTIONAL_IMAGE:
+				sequence_OptionalImage(context, (OptionalImage) semanticObject); 
 				return; 
 			case VideoGenPackage.OPTIONAL_VIDEO_SEQ:
 				sequence_OptionalVideoSeq(context, (OptionalVideoSeq) semanticObject); 
@@ -78,6 +94,21 @@ public class VideoGenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Media returns AlternativeImage
+	 *     Image returns AlternativeImage
+	 *     AlternativeImage returns AlternativeImage
+	 *
+	 * Constraint:
+	 *     (imageid=ID? images+=ImageDescription+)
+	 */
+	protected void sequence_AlternativeImage(ISerializationContext context, AlternativeImage semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Media returns AlternativeVideoSeq
 	 *     VideoSeq returns AlternativeVideoSeq
 	 *     AlternativeVideoSeq returns AlternativeVideoSeq
 	 *
@@ -117,6 +148,39 @@ public class VideoGenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     ImageDescription returns ImageDescription
+	 *
+	 * Constraint:
+	 *     (imageid=ID? location=STRING (top=STRING bottom=STRING)?)
+	 */
+	protected void sequence_ImageDescription(ISerializationContext context, ImageDescription semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Media returns MandatoryImage
+	 *     Image returns MandatoryImage
+	 *     MandatoryImage returns MandatoryImage
+	 *
+	 * Constraint:
+	 *     description=ImageDescription
+	 */
+	protected void sequence_MandatoryImage(ISerializationContext context, MandatoryImage semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VideoGenPackage.Literals.MANDATORY_IMAGE__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VideoGenPackage.Literals.MANDATORY_IMAGE__DESCRIPTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMandatoryImageAccess().getDescriptionImageDescriptionParserRuleCall_1_0(), semanticObject.getDescription());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Media returns MandatoryVideoSeq
 	 *     VideoSeq returns MandatoryVideoSeq
 	 *     MandatoryVideoSeq returns MandatoryVideoSeq
 	 *
@@ -149,6 +213,27 @@ public class VideoGenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Media returns OptionalImage
+	 *     Image returns OptionalImage
+	 *     OptionalImage returns OptionalImage
+	 *
+	 * Constraint:
+	 *     description=ImageDescription
+	 */
+	protected void sequence_OptionalImage(ISerializationContext context, OptionalImage semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VideoGenPackage.Literals.OPTIONAL_IMAGE__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VideoGenPackage.Literals.OPTIONAL_IMAGE__DESCRIPTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOptionalImageAccess().getDescriptionImageDescriptionParserRuleCall_1_0(), semanticObject.getDescription());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Media returns OptionalVideoSeq
 	 *     VideoSeq returns OptionalVideoSeq
 	 *     OptionalVideoSeq returns OptionalVideoSeq
 	 *
@@ -187,8 +272,7 @@ public class VideoGenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *         videoid=ID? 
 	 *         location=STRING 
 	 *         duration=INT? 
-	 *         probability=INT? 
-	 *         size=INT? 
+	 *         probability=PERCENTAGE? 
 	 *         description=STRING? 
 	 *         filter=Filter? 
 	 *         text=Text?
@@ -216,7 +300,7 @@ public class VideoGenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     VideoGeneratorModel returns VideoGeneratorModel
 	 *
 	 * Constraint:
-	 *     (information=VideoGenInformation? videoseqs+=VideoSeq+)
+	 *     (information=VideoGenInformation? medias+=Media+)
 	 */
 	protected void sequence_VideoGeneratorModel(ISerializationContext context, VideoGeneratorModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -86,6 +86,36 @@ public class VideoGenAdapterFactory extends AdapterFactoryImpl
         return createVideoGenInformationAdapter();
       }
       @Override
+      public Adapter caseMedia(Media object)
+      {
+        return createMediaAdapter();
+      }
+      @Override
+      public Adapter caseImage(Image object)
+      {
+        return createImageAdapter();
+      }
+      @Override
+      public Adapter caseMandatoryImage(MandatoryImage object)
+      {
+        return createMandatoryImageAdapter();
+      }
+      @Override
+      public Adapter caseOptionalImage(OptionalImage object)
+      {
+        return createOptionalImageAdapter();
+      }
+      @Override
+      public Adapter caseAlternativeImage(AlternativeImage object)
+      {
+        return createAlternativeImageAdapter();
+      }
+      @Override
+      public Adapter caseImageDescription(ImageDescription object)
+      {
+        return createImageDescriptionAdapter();
+      }
+      @Override
       public Adapter caseVideoSeq(VideoSeq object)
       {
         return createVideoSeqAdapter();
@@ -183,6 +213,96 @@ public class VideoGenAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVideoGenInformationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.videoGen.Media <em>Media</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.videoGen.Media
+   * @generated
+   */
+  public Adapter createMediaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.videoGen.Image <em>Image</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.videoGen.Image
+   * @generated
+   */
+  public Adapter createImageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.videoGen.MandatoryImage <em>Mandatory Image</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.videoGen.MandatoryImage
+   * @generated
+   */
+  public Adapter createMandatoryImageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.videoGen.OptionalImage <em>Optional Image</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.videoGen.OptionalImage
+   * @generated
+   */
+  public Adapter createOptionalImageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.videoGen.AlternativeImage <em>Alternative Image</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.videoGen.AlternativeImage
+   * @generated
+   */
+  public Adapter createAlternativeImageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.videoGen.ImageDescription <em>Image Description</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.videoGen.ImageDescription
+   * @generated
+   */
+  public Adapter createImageDescriptionAdapter()
   {
     return null;
   }

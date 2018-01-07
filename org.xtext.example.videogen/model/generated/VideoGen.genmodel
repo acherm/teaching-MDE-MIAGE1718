@@ -8,12 +8,30 @@
       fileExtensions="videogen" ecorePackage="VideoGen.ecore#/">
     <genClasses ecoreClass="VideoGen.ecore#//VideoGeneratorModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VideoGen.ecore#//VideoGeneratorModel/information"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VideoGen.ecore#//VideoGeneratorModel/videoseqs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VideoGen.ecore#//VideoGeneratorModel/medias"/>
     </genClasses>
     <genClasses ecoreClass="VideoGen.ecore#//VideoGenInformation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//VideoGenInformation/authorName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//VideoGenInformation/version"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//VideoGenInformation/creationDate"/>
+    </genClasses>
+    <genClasses ecoreClass="VideoGen.ecore#//Media"/>
+    <genClasses ecoreClass="VideoGen.ecore#//Image"/>
+    <genClasses ecoreClass="VideoGen.ecore#//MandatoryImage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VideoGen.ecore#//MandatoryImage/description"/>
+    </genClasses>
+    <genClasses ecoreClass="VideoGen.ecore#//OptionalImage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VideoGen.ecore#//OptionalImage/description"/>
+    </genClasses>
+    <genClasses ecoreClass="VideoGen.ecore#//AlternativeImage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//AlternativeImage/imageid"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VideoGen.ecore#//AlternativeImage/images"/>
+    </genClasses>
+    <genClasses ecoreClass="VideoGen.ecore#//ImageDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//ImageDescription/imageid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//ImageDescription/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//ImageDescription/top"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//ImageDescription/bottom"/>
     </genClasses>
     <genClasses ecoreClass="VideoGen.ecore#//VideoSeq"/>
     <genClasses ecoreClass="VideoGen.ecore#//MandatoryVideoSeq">
@@ -31,7 +49,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//VideoDescription/location"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//VideoDescription/duration"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//VideoDescription/probability"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//VideoDescription/size"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VideoGen.ecore#//VideoDescription/description"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VideoGen.ecore#//VideoDescription/filter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VideoGen.ecore#//VideoDescription/text"/>

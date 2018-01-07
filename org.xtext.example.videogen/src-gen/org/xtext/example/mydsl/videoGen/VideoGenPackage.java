@@ -77,13 +77,13 @@ public interface VideoGenPackage extends EPackage
   int VIDEO_GENERATOR_MODEL__INFORMATION = 0;
 
   /**
-   * The feature id for the '<em><b>Videoseqs</b></em>' containment reference list.
+   * The feature id for the '<em><b>Medias</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VIDEO_GENERATOR_MODEL__VIDEOSEQS = 1;
+  int VIDEO_GENERATOR_MODEL__MEDIAS = 1;
 
   /**
    * The number of structural features of the '<em>Video Generator Model</em>' class.
@@ -141,6 +141,192 @@ public interface VideoGenPackage extends EPackage
   int VIDEO_GEN_INFORMATION_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.videoGen.impl.MediaImpl <em>Media</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.videoGen.impl.MediaImpl
+   * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getMedia()
+   * @generated
+   */
+  int MEDIA = 2;
+
+  /**
+   * The number of structural features of the '<em>Media</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEDIA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.videoGen.impl.ImageImpl <em>Image</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.videoGen.impl.ImageImpl
+   * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getImage()
+   * @generated
+   */
+  int IMAGE = 3;
+
+  /**
+   * The number of structural features of the '<em>Image</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_FEATURE_COUNT = MEDIA_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.videoGen.impl.MandatoryImageImpl <em>Mandatory Image</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.videoGen.impl.MandatoryImageImpl
+   * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getMandatoryImage()
+   * @generated
+   */
+  int MANDATORY_IMAGE = 4;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MANDATORY_IMAGE__DESCRIPTION = IMAGE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Mandatory Image</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MANDATORY_IMAGE_FEATURE_COUNT = IMAGE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.videoGen.impl.OptionalImageImpl <em>Optional Image</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.videoGen.impl.OptionalImageImpl
+   * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getOptionalImage()
+   * @generated
+   */
+  int OPTIONAL_IMAGE = 5;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPTIONAL_IMAGE__DESCRIPTION = IMAGE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Optional Image</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPTIONAL_IMAGE_FEATURE_COUNT = IMAGE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.videoGen.impl.AlternativeImageImpl <em>Alternative Image</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.videoGen.impl.AlternativeImageImpl
+   * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getAlternativeImage()
+   * @generated
+   */
+  int ALTERNATIVE_IMAGE = 6;
+
+  /**
+   * The feature id for the '<em><b>Imageid</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALTERNATIVE_IMAGE__IMAGEID = IMAGE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Images</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALTERNATIVE_IMAGE__IMAGES = IMAGE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Alternative Image</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALTERNATIVE_IMAGE_FEATURE_COUNT = IMAGE_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.videoGen.impl.ImageDescriptionImpl <em>Image Description</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.videoGen.impl.ImageDescriptionImpl
+   * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getImageDescription()
+   * @generated
+   */
+  int IMAGE_DESCRIPTION = 7;
+
+  /**
+   * The feature id for the '<em><b>Imageid</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_DESCRIPTION__IMAGEID = 0;
+
+  /**
+   * The feature id for the '<em><b>Location</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_DESCRIPTION__LOCATION = 1;
+
+  /**
+   * The feature id for the '<em><b>Top</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_DESCRIPTION__TOP = 2;
+
+  /**
+   * The feature id for the '<em><b>Bottom</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_DESCRIPTION__BOTTOM = 3;
+
+  /**
+   * The number of structural features of the '<em>Image Description</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_DESCRIPTION_FEATURE_COUNT = 4;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.videoGen.impl.VideoSeqImpl <em>Video Seq</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -148,7 +334,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getVideoSeq()
    * @generated
    */
-  int VIDEO_SEQ = 2;
+  int VIDEO_SEQ = 8;
 
   /**
    * The number of structural features of the '<em>Video Seq</em>' class.
@@ -157,7 +343,7 @@ public interface VideoGenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VIDEO_SEQ_FEATURE_COUNT = 0;
+  int VIDEO_SEQ_FEATURE_COUNT = MEDIA_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.videoGen.impl.MandatoryVideoSeqImpl <em>Mandatory Video Seq</em>}' class.
@@ -167,7 +353,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getMandatoryVideoSeq()
    * @generated
    */
-  int MANDATORY_VIDEO_SEQ = 3;
+  int MANDATORY_VIDEO_SEQ = 9;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' containment reference.
@@ -195,7 +381,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getOptionalVideoSeq()
    * @generated
    */
-  int OPTIONAL_VIDEO_SEQ = 4;
+  int OPTIONAL_VIDEO_SEQ = 10;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' containment reference.
@@ -223,7 +409,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getAlternativeVideoSeq()
    * @generated
    */
-  int ALTERNATIVE_VIDEO_SEQ = 5;
+  int ALTERNATIVE_VIDEO_SEQ = 11;
 
   /**
    * The feature id for the '<em><b>Videoid</b></em>' attribute.
@@ -260,7 +446,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getVideoDescription()
    * @generated
    */
-  int VIDEO_DESCRIPTION = 6;
+  int VIDEO_DESCRIPTION = 12;
 
   /**
    * The feature id for the '<em><b>Videoid</b></em>' attribute.
@@ -299,22 +485,13 @@ public interface VideoGenPackage extends EPackage
   int VIDEO_DESCRIPTION__PROBABILITY = 3;
 
   /**
-   * The feature id for the '<em><b>Size</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VIDEO_DESCRIPTION__SIZE = 4;
-
-  /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VIDEO_DESCRIPTION__DESCRIPTION = 5;
+  int VIDEO_DESCRIPTION__DESCRIPTION = 4;
 
   /**
    * The feature id for the '<em><b>Filter</b></em>' containment reference.
@@ -323,7 +500,7 @@ public interface VideoGenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VIDEO_DESCRIPTION__FILTER = 6;
+  int VIDEO_DESCRIPTION__FILTER = 5;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' containment reference.
@@ -332,7 +509,7 @@ public interface VideoGenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VIDEO_DESCRIPTION__TEXT = 7;
+  int VIDEO_DESCRIPTION__TEXT = 6;
 
   /**
    * The number of structural features of the '<em>Video Description</em>' class.
@@ -341,7 +518,7 @@ public interface VideoGenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VIDEO_DESCRIPTION_FEATURE_COUNT = 8;
+  int VIDEO_DESCRIPTION_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.videoGen.impl.TextImpl <em>Text</em>}' class.
@@ -351,7 +528,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getText()
    * @generated
    */
-  int TEXT = 7;
+  int TEXT = 13;
 
   /**
    * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -406,7 +583,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getFilter()
    * @generated
    */
-  int FILTER = 8;
+  int FILTER = 14;
 
   /**
    * The number of structural features of the '<em>Filter</em>' class.
@@ -425,7 +602,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getBlackWhiteFilter()
    * @generated
    */
-  int BLACK_WHITE_FILTER = 9;
+  int BLACK_WHITE_FILTER = 15;
 
   /**
    * The number of structural features of the '<em>Black White Filter</em>' class.
@@ -444,7 +621,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getNegateFilter()
    * @generated
    */
-  int NEGATE_FILTER = 10;
+  int NEGATE_FILTER = 16;
 
   /**
    * The number of structural features of the '<em>Negate Filter</em>' class.
@@ -463,7 +640,7 @@ public interface VideoGenPackage extends EPackage
    * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getFlipFilter()
    * @generated
    */
-  int FLIP_FILTER = 11;
+  int FLIP_FILTER = 17;
 
   /**
    * The feature id for the '<em><b>Orientation</b></em>' attribute.
@@ -506,15 +683,15 @@ public interface VideoGenPackage extends EPackage
   EReference getVideoGeneratorModel_Information();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.videoGen.VideoGeneratorModel#getVideoseqs <em>Videoseqs</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.videoGen.VideoGeneratorModel#getMedias <em>Medias</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Videoseqs</em>'.
-   * @see org.xtext.example.mydsl.videoGen.VideoGeneratorModel#getVideoseqs()
+   * @return the meta object for the containment reference list '<em>Medias</em>'.
+   * @see org.xtext.example.mydsl.videoGen.VideoGeneratorModel#getMedias()
    * @see #getVideoGeneratorModel()
    * @generated
    */
-  EReference getVideoGeneratorModel_Videoseqs();
+  EReference getVideoGeneratorModel_Medias();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.videoGen.VideoGenInformation <em>Information</em>}'.
@@ -558,6 +735,154 @@ public interface VideoGenPackage extends EPackage
    * @generated
    */
   EAttribute getVideoGenInformation_CreationDate();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.videoGen.Media <em>Media</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Media</em>'.
+   * @see org.xtext.example.mydsl.videoGen.Media
+   * @generated
+   */
+  EClass getMedia();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.videoGen.Image <em>Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image</em>'.
+   * @see org.xtext.example.mydsl.videoGen.Image
+   * @generated
+   */
+  EClass getImage();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.videoGen.MandatoryImage <em>Mandatory Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Mandatory Image</em>'.
+   * @see org.xtext.example.mydsl.videoGen.MandatoryImage
+   * @generated
+   */
+  EClass getMandatoryImage();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.videoGen.MandatoryImage#getDescription <em>Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Description</em>'.
+   * @see org.xtext.example.mydsl.videoGen.MandatoryImage#getDescription()
+   * @see #getMandatoryImage()
+   * @generated
+   */
+  EReference getMandatoryImage_Description();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.videoGen.OptionalImage <em>Optional Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Optional Image</em>'.
+   * @see org.xtext.example.mydsl.videoGen.OptionalImage
+   * @generated
+   */
+  EClass getOptionalImage();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.videoGen.OptionalImage#getDescription <em>Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Description</em>'.
+   * @see org.xtext.example.mydsl.videoGen.OptionalImage#getDescription()
+   * @see #getOptionalImage()
+   * @generated
+   */
+  EReference getOptionalImage_Description();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.videoGen.AlternativeImage <em>Alternative Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Alternative Image</em>'.
+   * @see org.xtext.example.mydsl.videoGen.AlternativeImage
+   * @generated
+   */
+  EClass getAlternativeImage();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.videoGen.AlternativeImage#getImageid <em>Imageid</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Imageid</em>'.
+   * @see org.xtext.example.mydsl.videoGen.AlternativeImage#getImageid()
+   * @see #getAlternativeImage()
+   * @generated
+   */
+  EAttribute getAlternativeImage_Imageid();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.videoGen.AlternativeImage#getImages <em>Images</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Images</em>'.
+   * @see org.xtext.example.mydsl.videoGen.AlternativeImage#getImages()
+   * @see #getAlternativeImage()
+   * @generated
+   */
+  EReference getAlternativeImage_Images();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.videoGen.ImageDescription <em>Image Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image Description</em>'.
+   * @see org.xtext.example.mydsl.videoGen.ImageDescription
+   * @generated
+   */
+  EClass getImageDescription();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.videoGen.ImageDescription#getImageid <em>Imageid</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Imageid</em>'.
+   * @see org.xtext.example.mydsl.videoGen.ImageDescription#getImageid()
+   * @see #getImageDescription()
+   * @generated
+   */
+  EAttribute getImageDescription_Imageid();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.videoGen.ImageDescription#getLocation <em>Location</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Location</em>'.
+   * @see org.xtext.example.mydsl.videoGen.ImageDescription#getLocation()
+   * @see #getImageDescription()
+   * @generated
+   */
+  EAttribute getImageDescription_Location();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.videoGen.ImageDescription#getTop <em>Top</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Top</em>'.
+   * @see org.xtext.example.mydsl.videoGen.ImageDescription#getTop()
+   * @see #getImageDescription()
+   * @generated
+   */
+  EAttribute getImageDescription_Top();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.videoGen.ImageDescription#getBottom <em>Bottom</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Bottom</em>'.
+   * @see org.xtext.example.mydsl.videoGen.ImageDescription#getBottom()
+   * @see #getImageDescription()
+   * @generated
+   */
+  EAttribute getImageDescription_Bottom();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.videoGen.VideoSeq <em>Video Seq</em>}'.
@@ -696,17 +1021,6 @@ public interface VideoGenPackage extends EPackage
    * @generated
    */
   EAttribute getVideoDescription_Probability();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.videoGen.VideoDescription#getSize <em>Size</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Size</em>'.
-   * @see org.xtext.example.mydsl.videoGen.VideoDescription#getSize()
-   * @see #getVideoDescription()
-   * @generated
-   */
-  EAttribute getVideoDescription_Size();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.videoGen.VideoDescription#getDescription <em>Description</em>}'.
@@ -888,12 +1202,12 @@ public interface VideoGenPackage extends EPackage
     EReference VIDEO_GENERATOR_MODEL__INFORMATION = eINSTANCE.getVideoGeneratorModel_Information();
 
     /**
-     * The meta object literal for the '<em><b>Videoseqs</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Medias</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference VIDEO_GENERATOR_MODEL__VIDEOSEQS = eINSTANCE.getVideoGeneratorModel_Videoseqs();
+    EReference VIDEO_GENERATOR_MODEL__MEDIAS = eINSTANCE.getVideoGeneratorModel_Medias();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.videoGen.impl.VideoGenInformationImpl <em>Information</em>}' class.
@@ -928,6 +1242,130 @@ public interface VideoGenPackage extends EPackage
      * @generated
      */
     EAttribute VIDEO_GEN_INFORMATION__CREATION_DATE = eINSTANCE.getVideoGenInformation_CreationDate();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.videoGen.impl.MediaImpl <em>Media</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.videoGen.impl.MediaImpl
+     * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getMedia()
+     * @generated
+     */
+    EClass MEDIA = eINSTANCE.getMedia();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.videoGen.impl.ImageImpl <em>Image</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.videoGen.impl.ImageImpl
+     * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getImage()
+     * @generated
+     */
+    EClass IMAGE = eINSTANCE.getImage();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.videoGen.impl.MandatoryImageImpl <em>Mandatory Image</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.videoGen.impl.MandatoryImageImpl
+     * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getMandatoryImage()
+     * @generated
+     */
+    EClass MANDATORY_IMAGE = eINSTANCE.getMandatoryImage();
+
+    /**
+     * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MANDATORY_IMAGE__DESCRIPTION = eINSTANCE.getMandatoryImage_Description();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.videoGen.impl.OptionalImageImpl <em>Optional Image</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.videoGen.impl.OptionalImageImpl
+     * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getOptionalImage()
+     * @generated
+     */
+    EClass OPTIONAL_IMAGE = eINSTANCE.getOptionalImage();
+
+    /**
+     * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPTIONAL_IMAGE__DESCRIPTION = eINSTANCE.getOptionalImage_Description();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.videoGen.impl.AlternativeImageImpl <em>Alternative Image</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.videoGen.impl.AlternativeImageImpl
+     * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getAlternativeImage()
+     * @generated
+     */
+    EClass ALTERNATIVE_IMAGE = eINSTANCE.getAlternativeImage();
+
+    /**
+     * The meta object literal for the '<em><b>Imageid</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ALTERNATIVE_IMAGE__IMAGEID = eINSTANCE.getAlternativeImage_Imageid();
+
+    /**
+     * The meta object literal for the '<em><b>Images</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ALTERNATIVE_IMAGE__IMAGES = eINSTANCE.getAlternativeImage_Images();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.videoGen.impl.ImageDescriptionImpl <em>Image Description</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.videoGen.impl.ImageDescriptionImpl
+     * @see org.xtext.example.mydsl.videoGen.impl.VideoGenPackageImpl#getImageDescription()
+     * @generated
+     */
+    EClass IMAGE_DESCRIPTION = eINSTANCE.getImageDescription();
+
+    /**
+     * The meta object literal for the '<em><b>Imageid</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_DESCRIPTION__IMAGEID = eINSTANCE.getImageDescription_Imageid();
+
+    /**
+     * The meta object literal for the '<em><b>Location</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_DESCRIPTION__LOCATION = eINSTANCE.getImageDescription_Location();
+
+    /**
+     * The meta object literal for the '<em><b>Top</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_DESCRIPTION__TOP = eINSTANCE.getImageDescription_Top();
+
+    /**
+     * The meta object literal for the '<em><b>Bottom</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_DESCRIPTION__BOTTOM = eINSTANCE.getImageDescription_Bottom();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.videoGen.impl.VideoSeqImpl <em>Video Seq</em>}' class.
@@ -1042,14 +1480,6 @@ public interface VideoGenPackage extends EPackage
      * @generated
      */
     EAttribute VIDEO_DESCRIPTION__PROBABILITY = eINSTANCE.getVideoDescription_Probability();
-
-    /**
-     * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute VIDEO_DESCRIPTION__SIZE = eINSTANCE.getVideoDescription_Size();
 
     /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.

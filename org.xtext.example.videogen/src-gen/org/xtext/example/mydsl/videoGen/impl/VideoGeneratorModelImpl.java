@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.xtext.example.mydsl.videoGen.Media;
 import org.xtext.example.mydsl.videoGen.VideoGenInformation;
 import org.xtext.example.mydsl.videoGen.VideoGenPackage;
 import org.xtext.example.mydsl.videoGen.VideoGeneratorModel;
-import org.xtext.example.mydsl.videoGen.VideoSeq;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ import org.xtext.example.mydsl.videoGen.VideoSeq;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoGeneratorModelImpl#getInformation <em>Information</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoGeneratorModelImpl#getVideoseqs <em>Videoseqs</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.videoGen.impl.VideoGeneratorModelImpl#getMedias <em>Medias</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,14 +51,14 @@ public class VideoGeneratorModelImpl extends MinimalEObjectImpl.Container implem
   protected VideoGenInformation information;
 
   /**
-   * The cached value of the '{@link #getVideoseqs() <em>Videoseqs</em>}' containment reference list.
+   * The cached value of the '{@link #getMedias() <em>Medias</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVideoseqs()
+   * @see #getMedias()
    * @generated
    * @ordered
    */
-  protected EList<VideoSeq> videoseqs;
+  protected EList<Media> medias;
 
   /**
    * <!-- begin-user-doc -->
@@ -134,13 +134,13 @@ public class VideoGeneratorModelImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<VideoSeq> getVideoseqs()
+  public EList<Media> getMedias()
   {
-    if (videoseqs == null)
+    if (medias == null)
     {
-      videoseqs = new EObjectContainmentEList<VideoSeq>(VideoSeq.class, this, VideoGenPackage.VIDEO_GENERATOR_MODEL__VIDEOSEQS);
+      medias = new EObjectContainmentEList<Media>(Media.class, this, VideoGenPackage.VIDEO_GENERATOR_MODEL__MEDIAS);
     }
-    return videoseqs;
+    return medias;
   }
 
   /**
@@ -155,8 +155,8 @@ public class VideoGeneratorModelImpl extends MinimalEObjectImpl.Container implem
     {
       case VideoGenPackage.VIDEO_GENERATOR_MODEL__INFORMATION:
         return basicSetInformation(null, msgs);
-      case VideoGenPackage.VIDEO_GENERATOR_MODEL__VIDEOSEQS:
-        return ((InternalEList<?>)getVideoseqs()).basicRemove(otherEnd, msgs);
+      case VideoGenPackage.VIDEO_GENERATOR_MODEL__MEDIAS:
+        return ((InternalEList<?>)getMedias()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -173,8 +173,8 @@ public class VideoGeneratorModelImpl extends MinimalEObjectImpl.Container implem
     {
       case VideoGenPackage.VIDEO_GENERATOR_MODEL__INFORMATION:
         return getInformation();
-      case VideoGenPackage.VIDEO_GENERATOR_MODEL__VIDEOSEQS:
-        return getVideoseqs();
+      case VideoGenPackage.VIDEO_GENERATOR_MODEL__MEDIAS:
+        return getMedias();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -193,9 +193,9 @@ public class VideoGeneratorModelImpl extends MinimalEObjectImpl.Container implem
       case VideoGenPackage.VIDEO_GENERATOR_MODEL__INFORMATION:
         setInformation((VideoGenInformation)newValue);
         return;
-      case VideoGenPackage.VIDEO_GENERATOR_MODEL__VIDEOSEQS:
-        getVideoseqs().clear();
-        getVideoseqs().addAll((Collection<? extends VideoSeq>)newValue);
+      case VideoGenPackage.VIDEO_GENERATOR_MODEL__MEDIAS:
+        getMedias().clear();
+        getMedias().addAll((Collection<? extends Media>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -214,8 +214,8 @@ public class VideoGeneratorModelImpl extends MinimalEObjectImpl.Container implem
       case VideoGenPackage.VIDEO_GENERATOR_MODEL__INFORMATION:
         setInformation((VideoGenInformation)null);
         return;
-      case VideoGenPackage.VIDEO_GENERATOR_MODEL__VIDEOSEQS:
-        getVideoseqs().clear();
+      case VideoGenPackage.VIDEO_GENERATOR_MODEL__MEDIAS:
+        getMedias().clear();
         return;
     }
     super.eUnset(featureID);
@@ -233,8 +233,8 @@ public class VideoGeneratorModelImpl extends MinimalEObjectImpl.Container implem
     {
       case VideoGenPackage.VIDEO_GENERATOR_MODEL__INFORMATION:
         return information != null;
-      case VideoGenPackage.VIDEO_GENERATOR_MODEL__VIDEOSEQS:
-        return videoseqs != null && !videoseqs.isEmpty();
+      case VideoGenPackage.VIDEO_GENERATOR_MODEL__MEDIAS:
+        return medias != null && !medias.isEmpty();
     }
     return super.eIsSet(featureID);
   }

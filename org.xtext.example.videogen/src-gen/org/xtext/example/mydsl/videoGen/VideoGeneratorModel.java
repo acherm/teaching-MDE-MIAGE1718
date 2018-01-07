@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.videoGen.VideoGeneratorModel#getInformation <em>Information</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.videoGen.VideoGeneratorModel#getVideoseqs <em>Videoseqs</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.videoGen.VideoGeneratorModel#getMedias <em>Medias</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.mydsl.videoGen.VideoGenPackage#getVideoGeneratorModel()
@@ -53,19 +53,19 @@ public interface VideoGeneratorModel extends EObject
   void setInformation(VideoGenInformation value);
 
   /**
-   * Returns the value of the '<em><b>Videoseqs</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.mydsl.videoGen.VideoSeq}.
+   * Returns the value of the '<em><b>Medias</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.videoGen.Media}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Videoseqs</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Medias</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Videoseqs</em>' containment reference list.
-   * @see org.xtext.example.mydsl.videoGen.VideoGenPackage#getVideoGeneratorModel_Videoseqs()
+   * @return the value of the '<em>Medias</em>' containment reference list.
+   * @see org.xtext.example.mydsl.videoGen.VideoGenPackage#getVideoGeneratorModel_Medias()
    * @model containment="true"
    * @generated
    */
-  EList<VideoSeq> getVideoseqs();
+  EList<Media> getMedias();
 
 } // VideoGeneratorModel

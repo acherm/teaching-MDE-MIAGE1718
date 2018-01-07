@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.example.mydsl.videoGen.VideoDescription#getLocation <em>Location</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.VideoDescription#getDuration <em>Duration</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.VideoDescription#getProbability <em>Probability</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.videoGen.VideoDescription#getSize <em>Size</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.VideoDescription#getDescription <em>Description</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.VideoDescription#getFilter <em>Filter</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.videoGen.VideoDescription#getText <em>Text</em>}</li>
@@ -133,32 +132,6 @@ public interface VideoDescription extends EObject
    * @generated
    */
   void setProbability(int value);
-
-  /**
-   * Returns the value of the '<em><b>Size</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Size</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Size</em>' attribute.
-   * @see #setSize(int)
-   * @see org.xtext.example.mydsl.videoGen.VideoGenPackage#getVideoDescription_Size()
-   * @model
-   * @generated
-   */
-  int getSize();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.videoGen.VideoDescription#getSize <em>Size</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Size</em>' attribute.
-   * @see #getSize()
-   * @generated
-   */
-  void setSize(int value);
 
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.

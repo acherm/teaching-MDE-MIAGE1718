@@ -5,8 +5,6 @@ package org.xtext.example.mydsl.videoGen.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.xtext.example.mydsl.videoGen.VideoGenPackage;
 import org.xtext.example.mydsl.videoGen.VideoSeq;
 
@@ -17,7 +15,7 @@ import org.xtext.example.mydsl.videoGen.VideoSeq;
  *
  * @generated
  */
-public class VideoSeqImpl extends MinimalEObjectImpl.Container implements VideoSeq
+public class VideoSeqImpl extends MediaImpl implements VideoSeq
 {
   /**
    * <!-- begin-user-doc -->
