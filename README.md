@@ -18,8 +18,8 @@ We illustrate the course with a running project, VideoGen, a configurable genera
 * model transformation-- ModelManagementXtend1.pdf 
 * meta-programming, annotations, advanced compositions -- ModelManagementXtend2.pdf 
 * Xtend, a modern programming language implemented with MDE principles (Xtext included) -- ModelManagementXtend2.pdf
-* software product lines, variability modeling, and configuration: some cases (VaryLaTeX, JHipster testing) -- SPLVariability-misc.pdf
-+ https://github.com/FAMILIAR-project/HackOurLanguages-SIF/blob/master/slides/SamplingJHipsterCaseStudy.pdf + VaryLaTeX https://hal.inria.fr/hal-01659161/
+* software product lines, variability modeling, and configuration: some cases (VaryLaTeX, JHipster testing) -- SPLVariability-misc.pdf     * JHipster: https://github.com/FAMILIAR-project/HackOurLanguages-SIF/blob/master/slides/SamplingJHipsterCaseStudy.pdf 
+  * VaryLaTeX: https://hal.inria.fr/hal-01659161/
 
 ## Evaluation 
 
